@@ -18,3 +18,4 @@ six==1.10.0
 traitlets==4.1.0
 wcwidth==0.1.6
 wheel==0.24.0
+fake_factory==0.5.7
