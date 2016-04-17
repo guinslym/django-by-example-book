@@ -6,6 +6,53 @@ from django.core.urlresolvers import reverse
 #taggit
 from taggit.managers import TaggableManager
 
+'''
+#Command in the  shell to create Blog ' Post
+
+import random
+from django.contrib.auth.models import User
+from django.template.defaultfilters import slugify
+from faker import Factory
+fake = Factory.create()
+s = ' '
+
+user = User.objects.first()
+for item in range(1,40):
+    author = fake.name()
+    title = s.join(fake.words(random.randint(4,16)))
+    slug = slugify(title)
+    #slugify the title
+    status = 'published'
+    body = s.join(fake.paragraphs(random.randint(2,10)))
+    book = Post.objects.create(title=title, author=user, status=status, body=body, slug=slug )
+    print(author)
+    book.save()
+    #Creating Tags
+    #Retrieve the last saved Post
+    p = Post.objects.first() #last saved Post
+    available_tags = ['music', 'tango', 'hip hop', 'country', 'jazz']
+    for i in range(0, random.randint(0,5)):
+        pick_a_tag = random.choice(available_tags)
+        if pick_a_tag not in p.tags.all():
+            p.tags.add(pick_a_tag)        
+    #creating Comments
+    for sug in range(1,3):
+        name = fake.name()
+        email = fake.email()
+        body = s.join(fake.paragraphs(random.randint(1,3)))
+        comment = Comment.objects.create(post=p, name=name, email=email, body=body)
+        comment.save()
+
+####
+Delete Post and comments
+comments = Comment.objects.all()
+for i in comments:
+    i.delete()
+
+posts = Post.objects.all()
+for i in posts:
+    i.delete()
+'''
 
 # Create your models here.
 
@@ -28,7 +75,7 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="draft")
-    tags = TaggableManager()
+    #tags = TaggableManager()
 
     objects = models.Manager()
     published = PublishedManager()
