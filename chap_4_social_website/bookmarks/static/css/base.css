@@ -1,11 +1,3 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %} {% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <style type="text/css">
 @import url(http://fonts.googleapis.com/css?family=Muli);
 
 body {
@@ -283,18 +275,3 @@ img.user-detail {
     font-style:italic;
     color:#ccc;
 }
-
-    </style>
-</head>
-<body>
-    <div id="header">
-      <span class="logo">Bookmarks</span>
-    </div>
-
-    <div id="content">
-        {% block content %}
-        {% endblock %}
-    </div>
-    
-</body>
-</html>
