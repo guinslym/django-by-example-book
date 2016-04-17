@@ -2,7 +2,28 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
+'''
+#Command in the  shell to create Blog ' Post
 
+import random
+from django.contrib.auth.models import User
+from django.template.defaultfilters import slugify
+from faker import Factory
+fake = Factory.create()
+s = ' '
+
+user = User.objects.first()
+for item in range(1,40):
+    author = fake.name()
+    title = s.join(fake.words(random.randint(4,16)))
+    slug = slugify(title)
+    #slugify the title
+    status = 'published'
+    body = s.join(fake.paragraphs(random.randint(2,10)))
+    book = Post.objects.create(title=title, author=user, status=status, body=body, slug=slug )
+    print(author)
+    book.save()
+'''
 
 # Create your models here.
 
@@ -41,7 +62,5 @@ class Post(models.Model):
             self.publish.strftime('%m'),
             self.publish.strftime('%d'),
             self.slug])
-
-
 
 
