@@ -17,6 +17,32 @@
   <div id="sidebar">
     <h2>My blog</h2>
     <p>This is my blog. I've written {% total_posts %} post so far.</p>
+
+    <h3>Latest posts</h3>
+     {% show_latest_posts %}
+
+      <hr>
+     <h3>Most commented posts</h3>
+     {% get_most_commented_posts as most_commented_posts %}
+     <ul>
+       {% for post in most_commented_posts %}
+         <li>
+             <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+         </li>
+       {% endfor %}
+     </ul>
+
+      <hr>
+     <h3>Less commented posts</h3>
+     {% get_less_commented_posts as less_commented_posts %}
+     <ul>
+       {% for post in less_commented_posts %}
+         <li>
+             <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+         </li>
+       {% endfor %}
+     </ul>
+
   </div>
 
 </body>
