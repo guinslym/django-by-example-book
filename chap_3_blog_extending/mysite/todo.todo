@@ -1,3 +1,4 @@
 todo:
  ☐ I didn't understand the page 31. Because I added the paginate_by in the class-based view but it doesn,t render the pagination
  ☐ Need to read back the Views.py to make sure that I understand 'The similar posts' and 'how to render the Comment for in the Details.html'
+ ☐ Page 68 I couldn't render the Markdown properly

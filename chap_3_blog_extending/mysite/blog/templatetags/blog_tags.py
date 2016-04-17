@@ -1,5 +1,8 @@
 from django import template
 from django.db.models import Count
+#Filter templatetags
+from django.utils.safestring import mark_safe
+import markdown
 
 register = template.Library()
 
@@ -21,3 +24,9 @@ def get_most_commented_posts(count=5):
 @register.assignment_tag
 def get_less_commented_posts(count=3):
     return Post.published.annotate(total_comments=Count('comments')).order_by('total_comments')[:count]
+
+@register.filter(name='markdown')
+def markdown_format(text):
+    return mark_safe(markdown.markdown(text))
+
+
