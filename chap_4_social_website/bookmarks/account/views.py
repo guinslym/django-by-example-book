@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from . forms import LoginForm
 
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 def user_login(request):
@@ -26,4 +28,6 @@ def user_login(request):
     return render(request, 'account/login.html', {'form':form})
 
 
-
+@login_required
+def dashboard(request):
+    return render(request, 'account/dashboard.html', {'section':'dashboard'}) 

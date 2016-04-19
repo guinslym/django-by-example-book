@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Third party
+    'debug_toolbar',
+    'django_extensions',
+    #apps
     'account',
 ]
 
@@ -119,4 +124,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+            os.path.join(BASE_DIR, 'static'),
+            )
+
+#Sets the login logout URL
+LOGIN_REDIRECT_URL = reverse_lazy('dashboard') 
+LOGIN_URL = reverse_lazy('login') 
+LOGOUT_URL = reverse_lazy('logout') 
