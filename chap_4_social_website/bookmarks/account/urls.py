@@ -39,6 +39,10 @@ urlpatterns = [
         url(r'^password-reset/complete/$',
         password_reset_complete,
         name='password_reset_complete'),
+        #Edit profile
+        url(r'^edit/$', views.edit, name='edit'),
+        #Register
+        url(r'^register/$', views.register, name='register'),
         #root url
         url(r'^$', views.dashboard, name='dashboard'),
         ]
