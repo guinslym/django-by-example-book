@@ -21,3 +21,10 @@ wheel==0.24.0
 fake_factory==0.5.7
 django-taggit==0.17.1
 Markdown==2.6.2	
+djangorestframework==3.2.3
+celery
+python-social-auth
+pillow
+django-debug-toolbar
+django-haystack==2.4.0
+pysolr==3.3.2
