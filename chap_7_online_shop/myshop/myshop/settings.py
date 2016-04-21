@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Third party
+    'debug_toolbar',
+    'django_extensions',
+    'social.apps.django_app.default',
+    #apps
+    'shop',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -115,7 +121,38 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
-
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+            os.path.join(BASE_DIR, 'static'),
+            )
+
+#Sets the login logout URL
+#LOGIN_REDIRECT_URL = reverse_lazy('dashboard') 
+#LOGIN_URL = reverse_lazy('login') 
+#LOGOUT_URL = reverse_lazy('logout') 
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL
+EMAIL_HOST = 'smtp.gmail.com' 
+EMAIL_HOST_USER = 'your_account@gmail.com' 
+EMAIL_HOST_PASSWORD = 'your_password' 
+EMAIL_PORT = 587
+EMAIL_USE_TLS= True
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+    #'social.backends.facebook.Facebook2OAuth2',
+    'social.backends.twitter.TwitterOAuth',
+
+)
+
+SOCIAL_AUTH_TWITTER_KEY = 'XXX' # Twitter Consumer Key
+SOCIAL_AUTH_TWITTER_SECRET = 'XXX' # Twitter Consumer Secret
