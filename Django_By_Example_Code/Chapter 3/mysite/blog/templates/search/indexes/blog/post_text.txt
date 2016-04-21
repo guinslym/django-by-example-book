@@ -1,0 +1,3 @@
+{{ object.title }}
+{{ object.tags.all|join:", " }}
+{{ object.body }}

@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-09 02:15+0200\n"
+"PO-Revision-Date: 2015-06-14 08:42+0000\n"
+"Last-Translator: b'  <admin@admin.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.7.6\n"
+
+#: cart/forms.py:11 cart/templates/cart/detail.html:16
+msgid "Quantity"
+msgstr "Cantidad"
+
+#: cart/templates/cart/detail.html:6 cart/templates/cart/detail.html.py:10
+msgid "Your shopping cart"
+msgstr "Tu carro"
+
+#: cart/templates/cart/detail.html:14
+msgid "Image"
+msgstr "Imagen"
+
+#: cart/templates/cart/detail.html:15
+msgid "Product"
+msgstr "Producto"
+
+#: cart/templates/cart/detail.html:17 cart/templates/cart/detail.html.py:40
+msgid "Remove"
+msgstr "Eliminar"
+
+#: cart/templates/cart/detail.html:18
+msgid "Unit price"
+msgstr "Precio unitario"
+
+#: cart/templates/cart/detail.html:19
+msgid "Price"
+msgstr "Precio"
+
+#: cart/templates/cart/detail.html:36
+msgid "Update"
+msgstr "Actualizar"
+
+#: cart/templates/cart/detail.html:49
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#: cart/templates/cart/detail.html:54
+#, python-format
+msgid ""
+"\n"
+"                    <td>\"%(code)s\" coupon (%(discount)s%% off)</td>\n"
+"                "
+msgstr ""
+"\n"
+"<td>Cupón \"%(code)s\" (%(discount)s%% de descuento)</td>"
+
+#: cart/templates/cart/detail.html:62
+msgid "Total"
+msgstr "Total"
+
+#: cart/templates/cart/detail.html:71
+#: shop/templates/shop/product/detail.html:23
+msgid "People who bought this also bought"
+msgstr ""
+
+#: cart/templates/cart/detail.html:83
+msgid "Apply a coupon"
+msgstr "Aplicar un cupón"
+
+#: cart/templates/cart/detail.html:87
+msgid "Apply"
+msgstr "Aplicar"
+
+#: cart/templates/cart/detail.html:91
+msgid "Continue shopping"
+msgstr "Continuar comprando"
+
+#: cart/templates/cart/detail.html:92
+msgid "Checkout"
+msgstr "Realizar comprar"
+
+#: coupons/forms.py:6
+msgid "Coupon"
+msgstr "Cupón"
+
+#: myshop/settings.py:104
+msgid "English"
+msgstr "Inglés"
+
+#: myshop/settings.py:105
+msgid "Spanish"
+msgstr "Español"
+
+#: myshop/urls.py:11
+msgid "^cart/"
+msgstr "^carro/"
+
+#: myshop/urls.py:12
+msgid "^orders/"
+msgstr "^pedidos/"
+
+#: myshop/urls.py:13
+msgid "^payment/"
+msgstr "^pago/"
+
+#: myshop/urls.py:15
+msgid "^coupons/"
+msgstr "^cupones/"
+
+#: payment/templates/payment/canceled.html:5
+msgid "Your payment has not been processed"
+msgstr "Tu pago no ha sido procesado"
+
+#: payment/templates/payment/canceled.html:6
+msgid "There was a problem processing your payment."
+msgstr "Ha habido un problema al procesar tu pago."
+
+#: payment/templates/payment/done.html:5
+msgid "Your payment was successful"
+msgstr "Has pagado con éxito"
+
+#: payment/templates/payment/done.html:6
+msgid "Your payment has been successfully received."
+msgstr "Tu pago se ha recibido correctamente."
+
+#: payment/templates/payment/process.html:4
+#: payment/templates/payment/process.html:7
+msgid "Pay using PayPal"
+msgstr "Pagar mediante PayPal"
+
+#: payment/urls.py:7
+msgid "^process/$"
+msgstr "^procesar/$"
+
+#: payment/urls.py:8
+msgid "^done/$"
+msgstr "^realizado/$"
+
+#: payment/urls.py:9
+msgid "^canceled/$"
+msgstr "^cancelado/$"
+
+#: shop/templates/shop/base.html:7 shop/templates/shop/base.html.py:12
+msgid "My shop"
+msgstr "Mi tienda"
+
+#: shop/templates/shop/base.html:18
+msgid "Language"
+msgstr "Idioma"
+
+#: shop/templates/shop/base.html:34
+msgid "Your cart"
+msgstr "Tu carro"
+
+#: shop/templates/shop/base.html:36
+#, python-format
+msgid ""
+"\n"
+"                            %(total_items)s item%(total_items_plural)s, $"
+"%(total_price)s\n"
+"                        "
+msgstr ""
+"\n"
+"%(total_items)s producto%(total_items_plural)s, $%(total_price)s"
+
+#: shop/templates/shop/base.html:41
+msgid "Your cart is empty."
+msgstr "Tu carro está vacío."
+
+#: shop/templates/shop/product/detail.html:18
+msgid "Add to cart"
+msgstr "Añadir al carro"
+
+#: shop/templates/shop/product/list.html:6
+#: shop/templates/shop/product/list.html:24
+msgid "Products"
+msgstr "Productos"
+
+#: shop/templates/shop/product/list.html:11
+msgid "Categories"
+msgstr "Categorías"
+
+#: shop/templates/shop/product/list.html:14
+msgid "All"
+msgstr "Todos"
+
+#~ msgid "quantity"
+#~ msgstr "cantidad"
