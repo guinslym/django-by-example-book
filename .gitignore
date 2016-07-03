@@ -1,7 +1,8 @@
 *env_chap*
 *.pyc
 *__pycache*
-example-code-book
 *~$
 
 redo/*
+redo-all-chapters/*
+
