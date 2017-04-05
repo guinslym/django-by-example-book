@@ -2,7 +2,7 @@
 Code for **Django by Example** book by __Antonio Mele__ https://www.packtpub.com/web-development/django-example
 
 1. Star it :)
-2. for more django book (visit)[https://www.packtpub.com/web-development/django-example] 
+2. for more django book [visit](https://www.packtpub.com/web-development/django-example)
 2. Fork it ( https://github.com/guinslym/django-by-example/fork )
 3. Create your feature branch (`git checkout -b my-new-feature`)
 4. Test it
