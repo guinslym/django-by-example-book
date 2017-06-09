@@ -101,9 +101,19 @@ def post_share(request, post_id):
             subject = '{} ({}) recommends you reading "{}"'.format(cd['name'], cd['email'], post.title)
             message = 'Read "{}" at {}\n\n{}\'s comments: {}'.format(post.title, post_url, cd['name'], cd['comments'])
             #send_mail(subject, message, 'admin@myblog.com', [cd['to']])
+            
+            #Get the recipient email
+            recipient=cd['to']
             sent = True
     else:
         form = EmailPostForm()
-    return render(request, 'blog/post/share.html', {'post':post, 'form': form, 'sent': sent})
+        recipient=False
+    return render(request, 'blog/post/share.html', 
+                {
+                    'post':post, 
+                    'form': form, 
+                    'sent': sent, 
+                    'recipient': recipient}
+                )
 
 
