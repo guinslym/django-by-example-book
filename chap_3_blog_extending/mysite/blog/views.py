@@ -10,7 +10,7 @@ from django.db.models import Count
 
 def post_list(request, tag_slug=None):
     """
-
+ 
     """
     object_list = Post.published.all()
     tag = None
@@ -104,6 +104,6 @@ def post_share(request, post_id):
             sent = True
     else:
         form = EmailPostForm()
-    return render(request, 'blog/post/share.html', {'post':post, 'form': form, 'sent': sent})
+    return render(request, 'blog/post/share.html', {'post':post, 'form': form, 'sent': sent, 'cd': cd})
 
 
